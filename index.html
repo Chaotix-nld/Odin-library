@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contentHeader"><button id=newBook>Add Book</button></div>
+    <!--this is the modal for all of the input-->
+    <div id="modalTotal">
+        <div id="myModal" class="modal">
+            <div class="modalHeader">
+                <span class="close">&times;</span></div>
+                <h1>submit new book</h1>
+                
+            <div class="modalContent">
+                <div class="inputItem">
+                    <label>Book Title</label>
+                    <input type="text" placeholder="Please enter book title" id="bookTitle">
+                </div>
+                <div class="inputItem">
+                    <label>Author</label>
+                    <input type="text" placeholder="Please fill in name of author" id="bookAuthor">
+                </div>
+                <div class="inputItem">
+                    <label>Number of pages</label>
+                    <input type="number" id="bookPages">
+                </div>
+                <div class="radioButtons">
+                    <input type="radio" value="read" name="read">read
+                    <input type="radio" value="notread" name="read">not read yet
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+</html>
