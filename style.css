@@ -2,6 +2,20 @@
 body{
     margin: 0px;
     z-index: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+button#newBook{
+    width: 100px;
+    margin-left: auto;
+}
+.contentHeader{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #000268;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 #modalTotal{
     display: none;
@@ -27,7 +41,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
 .modalHeader{
@@ -98,7 +111,7 @@ input[type="radio"]{
     justify-content: center;
     align-items: center;
 }
-button#submit{
+button{
     width: 80px;
     height: 30px;
     font-size: 15px;
