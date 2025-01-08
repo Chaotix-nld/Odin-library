@@ -50,7 +50,8 @@ span.headerText{
 }
 /*bookdisplay mainbody*/
 .bookDisplay{
-    width: 220px;
+    width:fit-content;
+    height: fit-content;
     margin: 10px;
     display:flex;
     flex-direction: column;
@@ -81,6 +82,9 @@ span.headerText{
 .bookCover{
     height: 160px;
     box-sizing: border-box;
+}
+img{
+    height: 100%;
 }
 .bookPages{
     height: 25px;
