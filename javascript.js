@@ -8,8 +8,9 @@ const myLibrary =[
     {title: "Blood Of The Fold" , author:"Terry Goodkind", pageNum: 623, cover: "images/Blood_of_the_Fold.jpg"},
 ];
 
-function updateLibrary(){
-    const contentBody = document.querySelector(".contentBody");
+const contentBody = document.querySelector(".contentBody");
+function buildLibrary(){
+    
 
     //looping through array//
     for (i=0; i<myLibrary.length; i++){
@@ -41,18 +42,20 @@ function updateLibrary(){
         const bookFooter = document.createElement("div");
             bookFooter.classList.add("bookFooter");
         bookCard.appendChild(bookFooter);
-
-        const deleteButton = document.createElement("span");
+        //crating deletebutton//
+        const deleteButton = document.createElement("button");
             deleteButton.classList.add("material-symbols-outlined", "delete");
+            deleteButton.setAttribute("id", i);
+            deleteButton.setAttribute("onclick", "deleteItem(this.id)")
             deleteButton.textContent = "delete";
         bookFooter.appendChild(deleteButton);
-
+        //creating the checkbox//
         const checkboxContainer = document.createElement("div");
             checkboxContainer.classList.add("checkboxContainer");
         bookFooter.appendChild(checkboxContainer);
         const checkbox = document.createElement("input")
             checkbox.setAttribute("type", "checkbox");
-            checkbox.setAttribute("id", `check`+i);
+            checkbox.setAttribute("id", "check"+i);
             checkbox.classList.add("checkbox");
         const checkboxLabel = document.createElement("label");
             checkboxLabel.setAttribute("for", "check"+i);
@@ -62,7 +65,16 @@ function updateLibrary(){
         checkboxContainer.appendChild(checkboxLabel);
     }
 }
-updateLibrary();
+
+buildLibrary();
+//delete function test//
+//Delete item from array//
+function deleteItem(id){
+    let index = id;
+    const newLib = myLibrary.splice(id, 1);
+    contentBody.textContent = "";
+    buildLibrary();
+}
 
 
 

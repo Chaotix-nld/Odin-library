@@ -111,7 +111,11 @@ img{
     color: #b30000;
     cursor: pointer;
 }
-
+button.delete{
+    border-style: none;
+    width: fit-content;
+    background-color: transparent;
+}
 /*readbutton*/
 .checkboxContainer{
     display: flex;
