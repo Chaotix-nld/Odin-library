@@ -67,15 +67,25 @@ function buildLibrary(){
 }
 
 buildLibrary();
-//delete function test//
-//Delete item from array//
+
+//delete function//
 function deleteItem(id){
     let index = id;
     const newLib = myLibrary.splice(id, 1);
     contentBody.textContent = "";
     buildLibrary();
 }
+//add book function//
+function submitBook(){
+    const title = document.getElementById('bookTitle').value;
+    const author = document.getElementById('bookAuthor').value;
+    const pageNum = document.getElementById('bookPages').value;
 
+let newObject = {title: title, author: author, pageNum: pageNum, cover: "images/stockBook.png"}
+    myLibrary.push(newObject);
+    contentBody.textContent = "";
+    buildLibrary();
+}
 
 
 

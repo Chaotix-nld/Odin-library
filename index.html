@@ -13,20 +13,7 @@
         <button id=newBook>Add Book</button>
     </div>
     <div class="contentBody">
-        <!--basic book display build-->
-        <div class="bookDisplay">
-            <div class="bookTitle">The book Title</div>
-            <div class = "bookAuthor">The Author</div>
-            <div class = "bookCover"><img src="images/stockBook.png"></div>
-            <div class = "bookPages">num of pages</div>
-            <div class = bookFooter>
-                <span class="material-symbols-outlined">delete</span>
-                <div class="checkboxContainer">
-                    <input type="checkbox" class="checkbox" id="check">
-                    <label for="check" class="material-symbols-outlined checkboxLabel">bookmark_check</label>
-                </div>
-            </div>
-        </div>
+
     </div>
     
     <!--this is the modal for all of the input-->
@@ -51,7 +38,7 @@
                 </div>
             </div>
             <div class="modalFooter">
-                <button id="submit">Submit</button>
+                <button id="submit" onclick="submitBook()">Submit</button>
             </div>
         </div>
     </div>
