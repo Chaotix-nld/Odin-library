@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
     <div class="contentHeader">
@@ -18,7 +19,13 @@
             <div class = "bookAuthor">The Author</div>
             <div class = "bookCover"><img src="images/stockBook.png"></div>
             <div class = "bookPages">num of pages</div>
-            <div class = bookFooter> footer items</div>
+            <div class = bookFooter>
+                <span class="material-symbols-outlined">delete</span>
+                <div class="checkboxContainer">
+                    <input type="checkbox" class="checkbox" id="check">
+                    <label for="check" class="material-symbols-outlined checkboxLabel">bookmark_check</label>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -41,10 +48,6 @@
                 <div class="inputItem">
                     <label>Number of pages</label>
                     <input type="number" id="bookPages">
-                </div>
-                <div class="radioButtons">
-                    <input type="radio" value="read" name="read">read
-                    <input type="radio" value="notread" name="read">not read yet
                 </div>
             </div>
             <div class="modalFooter">

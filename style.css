@@ -17,6 +17,7 @@ button#newBook{
     width: 100px;
     margin-left: auto;
 }
+
 .contentHeader{
     width: 100%;
     box-sizing: border-box;
@@ -33,13 +34,11 @@ span.headerText{
     font-family: monospace;
     font-size: 1.3em;
 }
+
 /*mainbody*/
 .contentBody{
     width: 100%;
     height: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
     box-sizing: border-box;
     overflow: auto;
     padding: 20px;
@@ -48,6 +47,7 @@ span.headerText{
     justify-content: center ;
     align-items: flex-start;
 }
+
 /*bookdisplay mainbody*/
 .bookDisplay{
     width:fit-content;
@@ -69,7 +69,8 @@ span.headerText{
     background-color: #ebebeb;
     color:rgb(38, 57, 77);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;}
-/*bookdisplay inner body*/
+
+    /*bookdisplay inner body*/
 .bookDisplay>*{
     color:rgb(38, 57, 77);
     padding-top: 2px;
@@ -90,16 +91,44 @@ img{
     height: 25px;
 }
 .bookFooter{
+    width: 100%;
     height:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bookPages, .bookFooter, .bookCover{
     display: flex;
     align-items: center;
 }
 
+/*deletebutton*/
+.delete{
+    margin-right: 20px;
+}
 
+.delete:hover{
+    color: #b30000;
+    cursor: pointer;
+}
 
-
+/*readbutton*/
+.checkboxContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+input[type=checkbox]{
+    display: none;
+}
+.checkbox + .checkboxLabel{
+    color: #b30000;
+    cursor: pointer;
+}
+.checkbox:checked + .checkboxLabel{
+    color: green;
+    cursor: pointer;
+}
 /*modal*/
 #modalTotal{
     display: none;
@@ -185,10 +214,6 @@ input{
     padding-left: 10px;
     box-sizing: border-box;
 }
-input[type="radio"]{
-    margin-right: 5px;
-    background-color: white;
-}
 .modalFooter{
     height: 60px;
     display: flex;
@@ -205,6 +230,7 @@ button{
     color: black;
     border-radius: 25px;
 }
-button#submit:hover{
+button#submit:hover, button#newBook:hover{
     background-color: #bbbbbb;
+    cursor: pointer;
 }
